@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>document</title>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- <script src="js/vue.js"></script> -->
+	<style>
+
+.BMap_pop div{background: transparent!important;border-color: transparent!important;padding:0}
+.BMap_pop div>div{background: transparent!important;}
+.BMap_pop .aaa{background: transparent!important;}
+.BMap_pop .aaa>div{background: transparent!important;}
+.BMap_pop .aaa+img{
+	display: none!important;
+}
+.BMap_pop .map-img{width:28px!important;height: 14px!important;margin-left: auto!important;margin-top: 25px!important;}
+.BMap_bubble_title{overflow: auto;white-space: pre-wrap;}
+.peopleOpenClose {position: absolute;top:10px;right:15px;width:50px;height:50px;border-radius: 50%;background: rgba(14, 230, 220, 0.4);z-index:8;cursor: pointer;}
+.peopleDisplay {display: none;}
+		html,body,#map{
+			position: relative;
+			width: 100%;
+			height:100%;
+			overflow: hidden;
+		}
+		.sqImg{
+			position: absolute;
+			z-index: 9999;
+			width: 74px;
+			height: 70px;
+			border:3px solid #00b6f2;
+		}
+		.chaoSuTxt{
+			position: absolute;
+			z-index: 9999;
+			padding: 5px;
+			height: 25px;
+			line-height: 25px;
+			border:3px solid #00b6f2;
+			font-size:14px;
+        	color:#fff;
+		}
+		.sqImg img{
+			width: 74px;
+			height: 70px;
+		}
+		.asd{
+			width: 100px;
+			height: 100px;
+			background: #00ffff;
+			/* border-radius:50%; */
+			animation: loading 4s linear infinite;
+		}
+		@keyframes loading {
+			0% {
+				transform: rotate(0);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <div id="map"></div> -->
+	<div class="asd"></div>
+	<!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=lGdbdcsA3LBr1s2FIluWARnrZImND8PT"></script>
+	<script>
+		var map = new BMap.Map("map"); // 创建Map实例
+		var point = new BMap.Point(121.544624,31.132308);
+		//初始化地图,设置中心点坐标和地图级别
+		map.centerAndZoom(point, 17);
+		map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+		var chaoSuStr = '<p class="chaoSuTxt">80km/h</p>';
+		var weiTingStr = '<p class="sqImg"><img src="http://lbsyun.baidu.com/jsdemo/img/fox.gif"</p>';
+		
+		var marker = new BMap.Marker(point);  // 创建标注
+		map.addOverlay(marker);               // 将标注添加到地图中
+		var chaoSuInfoWindow = new BMap.InfoWindow(weiTingStr);
+		marker.addEventListener("click",function(e){  // 标记点事件
+			var p = e.target;
+			var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+			map.openInfoWindow(chaoSuInfoWindow,point); //开启信息窗口
+			//地图 样式
+			$(".BMap_bubble_title").parent("div").addClass("aaa");
+			$(".BMap_bottom").next().next().children("img").parent().addClass("aaa");
+			$(".BMap_bottom").next().next().children("img").css("display","none");
+			$(".BMap_bottom").next().next().children("img").addClass("map-img");
+		}); 
+
+		function asd(){
+			
+		}-->
+	</script>
+</body>
+
+</html>
